@@ -20,9 +20,10 @@ public class MyUtils {
 
 	static public Connection getConnection(int transactionLevel) throws ClassNotFoundException, SQLException {
 		String dbUrl = "jdbc:mysql://localhost/classicmodels?user=classicmodels&password=yourPassword";
-		String dbClass = "com.mysql.jdbc.Driver";
+		// String dbClass = "com.mysql.jdbc.Driver";
+		String dbClass = "org.mariadb.jdbc.Driver";
 
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName(dbClass);
 		Connection con = DriverManager.getConnection(dbUrl);
 		con.setAutoCommit(false);
 		con.setTransactionIsolation(transactionLevel);
