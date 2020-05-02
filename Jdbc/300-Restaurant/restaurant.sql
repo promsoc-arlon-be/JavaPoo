@@ -1,12 +1,12 @@
 use restaurant;
 
 # Delete table in reverse order to satisfy integrity constraints
-DROP table menu_plat;
-DROP table menu;
-DROP table platprincipal;
-DROP table entree;
-DROP table dessert;
-DROP table plat;
+DROP table if exists menu_plat ;
+DROP table if exists menu ;
+DROP table if exists platprincipal ;
+DROP table if exists entree ;
+DROP table if exists dessert ;
+DROP table if exists plat ;
 
 # Create table according to dependency rules
 CREATE TABLE menu (

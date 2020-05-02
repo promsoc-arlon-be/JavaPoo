@@ -11,6 +11,11 @@ import java.sql.PreparedStatement;
 import java.util.logging.Logger;
 
 public class MyUtils {
+
+	static String dbUrl = "jdbc:mysql://localhost/restaurant?user=restaurant&password=Java-Bien!";
+	// String dbClass = "com.mysql.jdbc.Driver";
+	static String dbClass = "org.mariadb.jdbc.Driver";
+
 	// assumes the current class is called MyUtils
 	private final static Logger LOGGER = Logger.getLogger(MyUtils.class.getName());
 
@@ -63,10 +68,6 @@ public class MyUtils {
 	 * @throws SQLException
 	 */
 	static public Connection getNewConnection(int transactionLevel) throws ClassNotFoundException, SQLException {
-
-		String dbUrl = "jdbc:mysql://localhost/restaurant?user=restaurant&password=anotherPassword";
-		// String dbClass = "com.mysql.jdbc.Driver";
-		String dbClass = "org.mariadb.jdbc.Driver";
 
 		Class.forName(dbClass);
 		Connection con = DriverManager.getConnection(dbUrl);
