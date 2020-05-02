@@ -19,7 +19,7 @@ public class MyUtils {
 	}
 
 	static public Connection getConnection(int transactionLevel) throws ClassNotFoundException, SQLException {
-		String dbUrl = "jdbc:mysql://localhost/classicmodels?user=classicmodels&password=yourPassword";
+		String dbUrl = "jdbc:mysql://localhost/classicmodels?user=classicmodels&password=classicmodels";
 		// String dbClass = "com.mysql.jdbc.Driver";
 		String dbClass = "org.mariadb.jdbc.Driver";
 
