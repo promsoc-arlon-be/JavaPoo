@@ -1,8 +1,8 @@
 
 # How to
 
-* Create the DB
-* Create the schema
+* Create the DB with create-db.sh
+* Create the schema with restaurant.sql
 * Run the Restaurant Java class
 
 # Sample execution:
