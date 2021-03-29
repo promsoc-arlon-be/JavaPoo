@@ -9,6 +9,7 @@ public class TransactionA {
 	public void doTA() throws Exception {
 
 		Connection con;
+		// TRANSACTION NONE is not iplemented !!!
 		// con = MyUtils.getConnection(Connection.TRANSACTION_NONE);
 		// con = MyUtils.getConnection(Connection.TRANSACTION_READ_UNCOMMITTED);
 		// con = MyUtils.getConnection(Connection.TRANSACTION_READ_COMMITTED);
@@ -31,6 +32,10 @@ public class TransactionA {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println("Adapt the bin folder if code is in GIT !!!!!!!!!!!!!!");
+		System.out.println("Otherwise you run old code ...");
+		System.out.println("");
 		System.out.println(
 				"cd ~/eclipse-workspace/IsolationLevel/bin; java -cp .:/usr/share/java/mariadb-java-client.jar TransactionA");
 		TransactionA ta = new TransactionA();

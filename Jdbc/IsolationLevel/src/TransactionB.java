@@ -5,13 +5,14 @@ public class TransactionB {
 	public final static String name = "TB";
 
 	public void doTB() throws Exception {
-		
+
 		Connection con;
+		// TRANSACTION NONE is not iplemented !!!
 		// con = MyUtils.getConnection(Connection.TRANSACTION_NONE);
 		// con = MyUtils.getConnection(Connection.TRANSACTION_READ_UNCOMMITTED);
-		con = MyUtils.getConnection(Connection.TRANSACTION_READ_COMMITTED);
+		// con = MyUtils.getConnection(Connection.TRANSACTION_READ_COMMITTED);
 		// con = MyUtils.getConnection(Connection.TRANSACTION_REPEATABLE_READ);
-		// con = MyUtils.getConnection(Connection.TRANSACTION_SERIALIZABLE);
+		con = MyUtils.getConnection(Connection.TRANSACTION_SERIALIZABLE);
 
 		MyUtils.readKey(name, "ready to start ?");
 		MyUtils.selectAllEmployee(con);
@@ -25,6 +26,10 @@ public class TransactionB {
 	}
 
 	public static void main(String[] args) {
+		System.out.println("!!!!!!!!!!!!!!!!!!!!!");
+		System.out.println("Adapt the bin folder if code is in GIT !!!!!!!!!!!!!!");
+		System.out.println("Otherwise you run old code ...");
+		System.out.println("");
 		System.out.println(
 				"cd ~/eclipse-workspace/IsolationLevel/bin; java -cp .:/usr/share/java/mariadb-java-client.jar TransactionB");
 		TransactionB ta = new TransactionB();
