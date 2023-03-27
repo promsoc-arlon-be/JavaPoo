@@ -36,7 +36,7 @@ public class MyUtils {
 		Statement stmt;
 		try {
 			stmt = con.createStatement();
-			String query = "CREATE TABLE animals (id MEDIUMINT NOT NULL AUTO_INCREMENT, name CHAR(30) NOT NULL,PRIMARY KEY (id))";
+			String query = "CREATE TABLE animals (id MEDIUMINT NOT NULL AUTO_INCREMENT, name CHAR(30) NOT NULL, PRIMARY KEY (id))";
 			stmt.execute(query);
 		} catch (SQLException e) {
 			// Ignore if table already exist

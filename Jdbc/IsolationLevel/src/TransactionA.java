@@ -12,9 +12,9 @@ public class TransactionA {
 		// TRANSACTION NONE is not iplemented !!!
 		// con = MyUtils.getConnection(Connection.TRANSACTION_NONE);
 		// con = MyUtils.getConnection(Connection.TRANSACTION_READ_UNCOMMITTED);
-		// con = MyUtils.getConnection(Connection.TRANSACTION_READ_COMMITTED);
+		con = MyUtils.getConnection(Connection.TRANSACTION_READ_COMMITTED);
 		// con = MyUtils.getConnection(Connection.TRANSACTION_REPEATABLE_READ);
-		con = MyUtils.getConnection(Connection.TRANSACTION_SERIALIZABLE);
+		// con = MyUtils.getConnection(Connection.TRANSACTION_SERIALIZABLE);
 
 		System.out.println("TA : reset employee extension to x1234");
 		MyUtils.resetEmployeeExtension(con);

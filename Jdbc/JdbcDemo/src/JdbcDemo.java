@@ -22,6 +22,7 @@ public class JdbcDemo {
 				System.out.println("Employee " + employeeNumber + " " + firstName + " " + lastName);
 			}
 			// end while
+			stmt.close();
 			con.close();
 		}
 //end try

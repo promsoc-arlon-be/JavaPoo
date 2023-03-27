@@ -11,9 +11,9 @@
 		<!-- Database Connection Settings -->
 		<property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
 		<!-- property name="hibernate.connection.url">jdbc:mysql://192.168.122.240:3306/phoneDb</property -->
-		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/phoneDb</property>
-		<property name="hibernate.connection.username">phoneDb</property>
-		<property name="hibernate.connection.password">Java-Bien!</property>
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/classicmodels</property>
+		<property name="hibernate.connection.username">classicmodels</property>
+		<property name="hibernate.connection.password">classicmodels</property>
 		<property name="show_sql">true</property>
 
 		<!-- Specifying Session Context -->
